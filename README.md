@@ -201,6 +201,7 @@ jobs:
 | `vercel_token`            | Vercel API authentication token                              | Yes      | -       |
 | `vercel_team_id`          | Vercel team ID for team projects                             | No       | -       |
 | `vercel_project_id`       | Vercel project ID to check deployments                       | Yes      | -       |
+| `match_preview_url`       | Exact string to match the preview URL                        | No       | -       |
 | `max_timeout`             | Maximum timeout in seconds for polling                       | No       | 300     |
 | `polling_interval`        | Interval between status checks in seconds                    | No       | 5       |
 | `deployment_ready_states` | Vercel deployment states considered ready (comma-separated)  | No       | 'READY' |

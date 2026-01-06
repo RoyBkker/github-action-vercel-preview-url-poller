@@ -8,6 +8,7 @@ async function run() {
     const token = core.getInput("vercel_token", { required: true });
     const teamId = core.getInput("vercel_team_id");
     const projectId = core.getInput("vercel_project_id", { required: true });
+    const matchPreviewUrl = core.getInput("match_preview_url");
     const maxTimeout = parseInt(core.getInput("max_timeout"), 10);
     const pollingInterval = parseInt(core.getInput("polling_interval"), 10);
     const readyStates = core.getInput("deployment_ready_states").split(",");
@@ -20,6 +21,7 @@ async function run() {
       token,
       teamId,
       projectId,
+      matchPreviewUrl,
     });
 
     if (!url || !deploymentId) {

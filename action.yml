@@ -15,6 +15,9 @@ inputs:
   vercel_project_id:
     description: "Vercel project ID"
     required: true
+  match_preview_url:
+    description: "Exact string to match the preview URL"
+    required: false
   max_timeout:
     description: "Maximum timeout (in seconds) to wait for deployment"
     required: false

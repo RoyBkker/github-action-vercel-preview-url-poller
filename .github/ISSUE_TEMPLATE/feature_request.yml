@@ -1,0 +1,61 @@
+name: Feature Request
+description: Suggest a new feature or enhancement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! Please provide as much detail as possible.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: Is your feature request related to a problem? Please describe.
+      placeholder: I'm frustrated when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see
+      placeholder: I'd like the action to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative solutions or workarounds?
+      placeholder: I've tried... but...
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Usage Example
+      description: If applicable, show how you'd like to use this feature
+      placeholder: |
+        ```yaml
+        - uses: RoyBkker/github-action-vercel-preview-url-poller@v1
+          with:
+            new_feature: value
+        ```
+      render: yaml
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: How would this feature benefit you and other users?
+      placeholder: This would help with...
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or examples
+      placeholder: Any additional information

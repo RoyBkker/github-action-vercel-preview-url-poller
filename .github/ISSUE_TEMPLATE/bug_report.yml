@@ -1,0 +1,90 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the information below.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Tell us what happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Set up workflow with...
+        2. Configure action with...
+        3. Run workflow...
+        4. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: Describe what you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: Describe what actually happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow Configuration
+      description: Please share your workflow YAML (remember to remove any secrets!)
+      placeholder: |
+        ```yaml
+        - name: Poll Vercel Deployment
+          uses: RoyBkker/github-action-vercel-preview-url-poller@v1.1.0
+          with:
+            vercel_token: ${{ secrets.VERCEL_TOKEN }}
+            # ... rest of configuration
+        ```
+      render: yaml
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Action Version
+      description: Which version of the action are you using?
+      placeholder: "e.g., v1.1.0 or @main"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Workflow Logs
+      description: Please include relevant workflow logs (sanitize any sensitive information)
+      placeholder: Paste logs here
+      render: text
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here
+      placeholder: Any additional information that might help

@@ -79,4 +79,6 @@ These can be customized via `deployment_ready_states` and `deployment_error_stat
 
 The action uses `@vercel/ncc` to compile all dependencies into a single `dist/index.js` file. This bundled file is what GitHub Actions executes. Always run `npm run build` before committing changes to ensure `dist/` is up to date.
 
-The `action.yml` specifies `node20` as the runtime and points to `dist/index.js` as the entry point.
+The `action.yml` specifies `node24` as the runtime and points to `dist/index.js` as the entry point. The build also emits `dist/licenses.txt` with third-party license attributions.
+
+Note: stay on `@actions/core` 2.x — version 3.x is ESM-only and is incompatible with the CommonJS source in `src/`.
